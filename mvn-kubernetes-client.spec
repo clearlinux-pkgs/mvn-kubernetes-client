@@ -4,11 +4,12 @@
 #
 Name     : mvn-kubernetes-client
 Version  : 3.0.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/fabric8io/kubernetes-client/archive/v3.0.0.tar.gz
 Source0  : https://github.com/fabric8io/kubernetes-client/archive/v3.0.0.tar.gz
-Source1  : https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.jar
-Source2  : https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.pom
+Source1  : https://repo1.maven.org/maven2/io/fabric8/kubernetes-client-project/3.0.0/kubernetes-client-project-3.0.0.pom
+Source2  : https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.jar
+Source3  : https://repo1.maven.org/maven2/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -32,11 +33,14 @@ data components for the mvn-kubernetes-client package.
 %build
 
 %install
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client-project/3.0.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client-project/3.0.0
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0
 
 
 %files
@@ -44,5 +48,6 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/io/fabric8/kubernetes-c
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/io/fabric8/kubernetes-client-project/3.0.0/kubernetes-client-project-3.0.0.pom
 /usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.jar
 /usr/share/java/.m2/repository/io/fabric8/kubernetes-client/3.0.0/kubernetes-client-3.0.0.pom
