@@ -4,7 +4,7 @@
 #
 Name     : mvn-kubernetes-client
 Version  : 3.0.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/fabric8io/kubernetes-client/archive/v3.0.0.tar.gz
 Source0  : https://github.com/fabric8io/kubernetes-client/archive/v3.0.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/io/fabric8/kubernetes-model-generator/2.0.0/kubernetes-model-generator-2.0.0.pom
